@@ -12,10 +12,10 @@
 namespace WalletConfig
 {
     /* The prefix your coins address starts with */
-    const std::string addressPrefix = "XL";
+    const std::string addressPrefix = "1";
 
     /* Your coins 'Ticker', e.g. Monero = XMR, Bitcoin = BTC */
-    const std::string ticker = "XLS";
+    const std::string ticker = "lnk";
 
     /* The filename to output the CSV to in save_csv */
     const std::string csvFilename = "transactions.csv";
@@ -25,20 +25,20 @@ namespace WalletConfig
     const std::string addressBookFilename = ".addressBook.json";
 
     /* The name of your deamon */
-    const std::string daemonName = "Excelsiord";
+    const std::string daemonName = "Laniakeyd";
 
     /* The name to call this wallet */
     const std::string walletName = "zedwallet";
 
     /* The name of service/walletd, the programmatic rpc interface to a
        wallet */
-    const std::string walletdName = "xls-service";
+    const std::string walletdName = "lnk-service";
 
     /* The full name of your crypto */
     const std::string coinName = std::string(CryptoNote::CRYPTONOTE_NAME);
 
     /* Where can your users contact you for support? E.g. discord */
-    const std::string contactLink = "http://github.com/xlscoin/";
+    const std::string contactLink = "http://github.com/hummingbirdwhocode/Laniakey-v2-adaptive/";
 
     /* The number of decimals your coin has */
     const uint8_t numDecimalPlaces = CryptoNote::parameters
@@ -46,7 +46,7 @@ namespace WalletConfig
 
 
     /* The length of a standard address for your coin */
-    const uint16_t standardAddressLength = 97;
+    const uint16_t standardAddressLength = 95;
 
     /* The length of an integrated address for your coin - It's the same as
        a normal address, but there is a paymentID included in there - since
