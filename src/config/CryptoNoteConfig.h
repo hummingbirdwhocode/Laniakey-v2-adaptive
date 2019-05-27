@@ -18,25 +18,25 @@
 namespace CryptoNote {
 namespace parameters {
 
-const uint64_t DIFFICULTY_TARGET                             = 45; // seconds
+const uint64_t DIFFICULTY_TARGET                             = 60; // seconds
 
 const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 500000000;
 const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 500000000;
 const size_t   CRYPTONOTE_MAX_TX_SIZE                        = 1000000000;
-const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 0x2935;
-const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 80;
+const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 0x1;
+const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 10;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT            = 60 * 60 * 2;
 
 const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW             = 60;
 
 // MONEY_SUPPLY - total number coins to be generated
-const uint64_t MONEY_SUPPLY                                  = UINT64_C(170000000000000);
+const uint64_t MONEY_SUPPLY                                  = 82233000000;
 
-const unsigned EMISSION_SPEED_FACTOR                         = 24;
+const unsigned EMISSION_SPEED_FACTOR                         = 34;
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
 /* Premine amount */
-const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(1100000000000);
+const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(0);
 
 /* How to generate a premine:
 
@@ -58,7 +58,7 @@ Excelsiord --print-genesis-tx --genesis-block-reward-address XL4QZU4Nsxm6JdXWetm
 * You should see your premine appear in the previously generated wallet.
 
 */
-const char GENESIS_COINBASE_TX_HEX[] = "015001ff000180f0efe8812002a8f723cdbc4901f9a60501e5d57e2fa3f0273ca5dc22fcb981e528d142eac8e421019e85b5fc8e6965d7a400999358c7f725a19bc2e538aef1598936ad7f56f7424e";
+const char GENESIS_COINBASE_TX_HEX[] = "015001ff000180f0efe8812002a8f723cdbc4901f9a60501e5d57e2fa3f0273ca5dc22fcb981e528d142eac8e421019e85b5fc8e6965d7a400999358c7f725a18bc1e538aef1598936ad7f56f7528e";
 static_assert(sizeof(GENESIS_COINBASE_TX_HEX)/sizeof(*GENESIS_COINBASE_TX_HEX) != 1, "GENESIS_COINBASE_TX_HEX must not be empty.");
 
 /* This is the unix timestamp of the first "mined" block (technically block 2, not the genesis block)
@@ -66,14 +66,14 @@ static_assert(sizeof(GENESIS_COINBASE_TX_HEX)/sizeof(*GENESIS_COINBASE_TX_HEX) !
    to import from when the block height cannot be found in the node or the node is offline. */
 const uint64_t GENESIS_BLOCK_TIMESTAMP                       = 1549164877;
 
-const size_t   CRYPTONOTE_REWARD_BLOCKS_WINDOW               = 100;
+const size_t   CRYPTONOTE_REWARD_BLOCKS_WINDOW               = 10;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE     = 100000; //size of block (bytes) after which reward for block calculated using block size
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V2  = 20000;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V1  = 10000;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_CURRENT = CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE;
 const size_t   CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE        = 600;
 
-const size_t   CRYPTONOTE_DISPLAY_DECIMAL_POINT              = 5;
+const size_t   CRYPTONOTE_DISPLAY_DECIMAL_POINT              = 8;
 
 const uint64_t MINIMUM_FEE                                   = UINT64_C(10);
 
@@ -151,7 +151,7 @@ const char     P2P_NET_DATA_FILENAME[]                       = "p2pstate.bin";
 const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.json";
 } // parameters
 
-const char     CRYPTONOTE_NAME[]                             = "Excelsior";
+const char     CRYPTONOTE_NAME[]                             = "lnktestnet";
 
 const uint8_t  TRANSACTION_VERSION_1                         =  1;
 const uint8_t  TRANSACTION_VERSION_2                         =  2;
@@ -170,8 +170,8 @@ const size_t   BLOCKS_IDS_SYNCHRONIZING_DEFAULT_COUNT        =  10000;  //by def
 const size_t   BLOCKS_SYNCHRONIZING_DEFAULT_COUNT            =  100;    //by default, blocks count in blocks downloading
 const size_t   COMMAND_RPC_GET_BLOCKS_FAST_MAX_COUNT         =  1000;
 
-const int      P2P_DEFAULT_PORT                              =  19801;
-const int      RPC_DEFAULT_PORT                              =  19802;
+const int      P2P_DEFAULT_PORT                              =  11777;
+const int      RPC_DEFAULT_PORT                              =  11778;
 const int      SERVICE_DEFAULT_PORT                          =  4455;
 
 const size_t   P2P_LOCAL_WHITE_PEERLIST_LIMIT                =  1000;
@@ -206,17 +206,15 @@ const uint64_t DATABASE_READ_BUFFER_MB_DEFAULT_SIZE          = 10;
 const uint32_t DATABASE_DEFAULT_MAX_OPEN_FILES               = 100;
 const uint16_t DATABASE_DEFAULT_BACKGROUND_THREADS_COUNT     = 2;
 
-const char     LATEST_VERSION_URL[]                          = "https://github.com/xlscoin/excelsior/releases";
-const std::string LICENSE_URL                                = "https://github.com/xlscoin/excelsior/blob/master/LICENSE";
+const char     LATEST_VERSION_URL[]                          = "";
+const std::string LICENSE_URL                                = "";
 const static   boost::uuids::uuid CRYPTONOTE_NETWORK         =
 {
-    {  0x65, 0x78, 0x63, 0x65, 0x6c, 0x73, 0x69, 0x6f, 0x72, 0x62, 0x79, 0x6d, 0x6f, 0x72, 0x70, 0x68  }
+    {  0x55, 0x58, 0x80, 0x85, 0x8c, 0x73, 0x74, 0x6f, 0x72, 0x23, 0x89, 0x6d, 0x6f, 0x72, 0x40, 0x68  }
 };
 
 const char* const SEED_NODES[] = {
-  "185.17.27.105:19801",   //
-  "104.238.222.130:19801", //
-  "185.103.97.205:19801",  //
-  "97.64.253.98:19801"     //
+  "0.0.0.0:11777",   //
+  "0.0.0.0:11777",   //
 };
 } // CryptoNote
