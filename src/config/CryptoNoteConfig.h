@@ -49,7 +49,7 @@ const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(0);
 --print-genesis-tx --genesis-block-reward-address <premine wallet address>
 
 For example:
-Laniakeyd --print-genesis-tx --genesis-block-reward-address XL4QZU4Nsxm6JdXWetmGbdchPo8E5TxgJFnWWTrDRaEQ5suw7mXUqVVEiBJtqYCv7BJT7WwRB65xCcX9Y1pZhAMW2X3RPBjCH
+Laniakeyd --print-genesis-tx --genesis-block-reward-address 1dQZU4Nsxm6JdXWetmGbdchPo8E5TxgJFnWWTrDRaEQ5suw7mXUqVVEiBJtqYCv7BJT7WwRB65xCcX9Y1pZhAMW2X3RPBjCH
 
 * Take the hash printed, and replace it with the hash below in GENESIS_COINBASE_TX_HEX
 
