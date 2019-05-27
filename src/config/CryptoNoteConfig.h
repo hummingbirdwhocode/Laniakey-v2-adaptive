@@ -30,7 +30,7 @@ const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT            = 60 * 60 * 2;
 const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW             = 60;
 
 // MONEY_SUPPLY - total number coins to be generated
-const uint64_t MONEY_SUPPLY                                  = 82233000000;
+const uint64_t MONEY_SUPPLY                                  = 92233000000;
 
 const unsigned EMISSION_SPEED_FACTOR                         = 34;
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
@@ -49,7 +49,7 @@ const uint64_t GENESIS_BLOCK_REWARD                          = UINT64_C(0);
 --print-genesis-tx --genesis-block-reward-address <premine wallet address>
 
 For example:
-Excelsiord --print-genesis-tx --genesis-block-reward-address XL4QZU4Nsxm6JdXWetmGbdchPo8E5TxgJFnWWTrDRaEQ5suw7mXUqVVEiBJtqYCv7BJT7WwRB65xCcX9Y1pZhAMW2X3RPBjCH
+Laniakeyd --print-genesis-tx --genesis-block-reward-address XL4QZU4Nsxm6JdXWetmGbdchPo8E5TxgJFnWWTrDRaEQ5suw7mXUqVVEiBJtqYCv7BJT7WwRB65xCcX9Y1pZhAMW2X3RPBjCH
 
 * Take the hash printed, and replace it with the hash below in GENESIS_COINBASE_TX_HEX
 
