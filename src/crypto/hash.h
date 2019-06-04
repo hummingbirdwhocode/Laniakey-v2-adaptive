@@ -32,7 +32,7 @@
 #define CN_TURTLE_ITERATIONS            131072
 
 // CryptoNight Soft Shell Definitions
-#define CN_SOFT_SHELL_MEMORY            262144 // This defines the lowest memory utilization for our curve
+#define CN_SOFT_SHELL_MEMORY            524288//262144 This defines the lowest memory utilization for our curve
 #define CN_SOFT_SHELL_WINDOW            2048 // This defines how many blocks we cycle through as part of our algo sine wave
 #define CN_SOFT_SHELL_MULTIPLIER        3 // This defines how big our steps are for each block and
                                           // ultimately determines how big our sine wave is. A smaller value means a bigger wave
