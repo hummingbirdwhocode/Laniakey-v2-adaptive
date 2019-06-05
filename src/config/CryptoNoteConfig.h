@@ -19,13 +19,13 @@
 namespace CryptoNote {
 namespace parameters {
 
-const uint64_t DIFFICULTY_TARGET                             = 60; // seconds
+const uint64_t DIFFICULTY_TARGET                             = 10; // seconds
 
 const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 500000000;
 const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 500000000;
 const size_t   CRYPTONOTE_MAX_TX_SIZE                        = 1000000000;
-const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 0x1;
-const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 10;
+const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 0x2;
+const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 5;
 const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT            = 60 * 60 * 2;
 
 const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW             = 60;
@@ -59,6 +59,7 @@ Laniakeyd --print-genesis-tx --genesis-block-reward-address 1dQZU4Nsxm6JdXWetmGb
 * You should see your premine appear in the previously generated wallet.
 
 */
+//const char GENESIS_COINBASE_TX_HEX[] = "013c01ff0001ffffffffffff03029b2e4c0281c1b02e7c53291a94d1d0cbff8883f8024f5142ee494ffbbd08807121017767aafcde9be00dcfd098715ebcf7f410daebc582fda69d24a28e9d0bc780d6";
 const char GENESIS_COINBASE_TX_HEX[] = "015001ff000180f0efe8812002a8f723cdbc4901f9a60501e5d57e2fa3f0273ca5dc22fcb981e528d142eac8e421019e85b5fc8e6965d7a400999358c7f725a18bc1e538aef1598936ad7f56f7528e";
 static_assert(sizeof(GENESIS_COINBASE_TX_HEX)/sizeof(*GENESIS_COINBASE_TX_HEX) != 1, "GENESIS_COINBASE_TX_HEX must not be empty.");
 
@@ -68,7 +69,7 @@ static_assert(sizeof(GENESIS_COINBASE_TX_HEX)/sizeof(*GENESIS_COINBASE_TX_HEX) !
 const uint64_t GENESIS_BLOCK_TIMESTAMP                       = 1549164877;
 
 const size_t   CRYPTONOTE_REWARD_BLOCKS_WINDOW               = 10;
-const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE     = 100000; //size of block (bytes) after which reward for block calculated using block size
+const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE     = 1000; //size of block (bytes) after which reward for block calculated using block size
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V2  = 20000;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V1  = 10000;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_CURRENT = CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE;
@@ -125,7 +126,7 @@ static_assert(UPGRADE_VOTING_WINDOW > 1, "Bad UPGRADE_VOTING_WINDOW");
 /* Block heights we are going to have hard forks at */
 const uint64_t FORK_HEIGHTS[] =
 {
-    10000000
+//  10000000
 };
 
 /* MAKE SURE TO UPDATE THIS VALUE WITH EVERY MAJOR RELEASE BEFORE A FORK */
@@ -152,7 +153,7 @@ const char     P2P_NET_DATA_FILENAME[]                       = "p2pstate.bin";
 const char     MINER_CONFIG_FILE_NAME[]                      = "miner_conf.json";
 } // parameters
 
-const char     CRYPTONOTE_NAME[]                             = "lnktestnet";
+const char     CRYPTONOTE_NAME[]                             = "LANIAKEY";
 
 const uint8_t  TRANSACTION_VERSION_1                         =  1;
 const uint8_t  TRANSACTION_VERSION_2                         =  2;
@@ -171,8 +172,8 @@ const size_t   BLOCKS_IDS_SYNCHRONIZING_DEFAULT_COUNT        =  10000;  //by def
 const size_t   BLOCKS_SYNCHRONIZING_DEFAULT_COUNT            =  100;    //by default, blocks count in blocks downloading
 const size_t   COMMAND_RPC_GET_BLOCKS_FAST_MAX_COUNT         =  1000;
 
-const int      P2P_DEFAULT_PORT                              =  11777;
-const int      RPC_DEFAULT_PORT                              =  11778;
+const int      P2P_DEFAULT_PORT                              =  10001;
+const int      RPC_DEFAULT_PORT                              =  10002;
 const int      SERVICE_DEFAULT_PORT                          =  4455;
 
 const size_t   P2P_LOCAL_WHITE_PEERLIST_LIMIT                =  1000;
@@ -207,7 +208,7 @@ const uint64_t DATABASE_READ_BUFFER_MB_DEFAULT_SIZE          = 10;
 const uint32_t DATABASE_DEFAULT_MAX_OPEN_FILES               = 100;
 const uint16_t DATABASE_DEFAULT_BACKGROUND_THREADS_COUNT     = 2;
 
-const char     LATEST_VERSION_URL[]                          = "";
+const char     LATEST_VERSION_URL[]                          = "https://github.com/hummingbirdwhocode/Laniakey-v2-adaptive/releases";
 const std::string LICENSE_URL                                = "";
 const static   boost::uuids::uuid CRYPTONOTE_NETWORK         =
 {
@@ -215,7 +216,7 @@ const static   boost::uuids::uuid CRYPTONOTE_NETWORK         =
 };
 
 const char* const SEED_NODES[] = {
-  "0.0.0.0:11777",   //
-  "0.0.0.0:11777",   //
+  "0.0.0.0:10001",   //
+  "0.0.0.0:10001",   //
 };
 } // CryptoNote
