@@ -3,7 +3,7 @@
 
 #define PROJECT_NAME "Laniakey"
 #define PROJECT_SITE "http://Laniakeyproject.info"
-#define PROJECT_COPYRIGHT "Copyright 2019, The Excelsior Developers"
+#define PROJECT_COPYRIGHT "Copyright 2019, The Laniakey Project"
 #define APP_VER_MAJOR 2
 #define APP_VER_MINOR 0
 #define APP_VER_REV 0
