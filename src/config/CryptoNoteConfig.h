@@ -31,7 +31,7 @@ const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT            = 60 * 60 * 2;
 const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW             = 60;
 
 // MONEY_SUPPLY - total number coins to be generated
-const uint64_t MONEY_SUPPLY                                  =  UINT64_C(10000000000);//UINT64_C(9223372036854775808);
+const uint64_t MONEY_SUPPLY                                  =  UINT64_C(8589869056);//UINT64_C(9223372036854775808);
 const unsigned EMISSION_SPEED_FACTOR                         = 34;
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
@@ -74,7 +74,7 @@ const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V1  = 10000;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_CURRENT = CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE;
 const size_t   CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE        = 600;
 
-const size_t   CRYPTONOTE_DISPLAY_DECIMAL_POINT              = 3;
+const size_t   CRYPTONOTE_DISPLAY_DECIMAL_POINT              = 4;
 
 const uint64_t MINIMUM_FEE                                   = UINT64_C(50);
 
