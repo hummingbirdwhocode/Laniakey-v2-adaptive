@@ -39,7 +39,7 @@ namespace WalletConfig
     const std::string coinName = std::string(CryptoNote::CRYPTONOTE_NAME);
 
     /* Where can your users contact you for support? E.g. discord */
-    const std::string contactLink = "http://github.com/hummingbirdwhocode/Laniakey-v2-adaptive/";
+    const std::string contactLink = "http://github.com/hummingbirdwhocode/laniakey/";
 
     /* The number of decimals your coin has */
     const uint8_t numDecimalPlaces = CryptoNote::parameters
