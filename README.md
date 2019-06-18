@@ -2,7 +2,7 @@
 
 ### Installing
 
-We offer binary images of the latest releases here: https://github.com/hummingbirdwhocode/Laniakey-v2-adaptive
+We offer binary images of the latest releases here: https://github.com/hummingbirdwhocode/laniakey
 
 If you would like to compile yourself, read on.
 
@@ -63,7 +63,7 @@ You need to modify the below command for your version of ubuntu - see https://ap
 - `sudo pip install cmake`
 - `export CC=clang-6.0`
 - `export CXX=clang++-6.0`
-- `git clone -b master --single-branch https://github.com/hummingbirdwhocode/Laniakey-v2-adaptive`
+- `git clone -b master --single-branch https://github.com/hummingbirdwhocode/laniakey`
 - `cd laniakey`
 - `mkdir build`
 - `cd build`
@@ -82,7 +82,7 @@ Ensure you have the dependencies listed above.
 If you want to use clang, ensure you set the environment variables `CC` and `CXX`.
 See the ubuntu instructions for an example.
 
-- `git clone -b master --single-branch https://github.com/hummingbirdwhocode/Laniakey-v2-adaptive`
+- `git clone -b master --single-branch https://github.com/hummingbirdwhocode/laniakey`
 - `cd laniakey`
 - `mkdir build`
 - `cd build`
@@ -106,7 +106,7 @@ The binaries will be in the `src` folder when you are complete.
 - `brew install --force cmake boost llvm gcc@8`
 - `export CC=gcc-8`
 - `export CXX=g++-8`
-- `git clone -b master --single-branch https://github.com/hummingbirdwhocode/Laniakey-v2-adaptive`
+- `git clone -b master --single-branch https://github.com/hummingbirdwhocode/laniakey`
 - `cd laniakey`
 - `mkdir build`
 - `cd build`
@@ -129,8 +129,7 @@ The binaries will be in the `src` folder when you are complete.
 - `which brew || /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 - `brew install --force cmake boost llvm`
 - `export CC=/usr/local/opt/llvm/bin/clang`
-- `export CXX=/usr/local/opt/llvm/bin/clang++`
-- `git clone -b master --single-branch https://github.com/hummingbirdwhocode/Laniakey-v2-adaptive`
+- `export CXX=/usr/local/opt/llvm/bin/clang++`laniakey-rapidN`
 - `cd laniakey`
 - `mkdir build`
 - `cd build`
@@ -183,7 +182,7 @@ Once you have a 64 bit image installed, setup proceeds the same as any Linux dis
 
 ##### Building
 
-- `git clone -b master --single-branch https://github.com/hummingbirdwhocode/Laniakey-v2-adaptive`
+- `git clone -b master --single-branch https://github.com/hummingbirdwhocode/laniakey`
 - `cd laniakey`
 - `mkdir build`
 - `cd build`
