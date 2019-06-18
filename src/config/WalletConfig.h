@@ -26,7 +26,7 @@ namespace WalletConfig
     const std::string addressBookFilename = ".addressBook.json";
 
     /* The name of your deamon */
-    const std::string daemonName = "Laniakeyd";
+    const std::string daemonName = "laniakeyd";
 
     /* The name to call this wallet */
     const std::string walletName = "zedwallet";
@@ -67,7 +67,7 @@ namespace WalletConfig
     const uint64_t minimumSend = 1;
 
     /* Is a mixin of zero disabled on your network? */
-    const bool mixinZeroDisabled = true;
+    const bool mixinZeroDisabled = false;
 
     /* If a mixin of zero is disabled, at what height was it disabled? E.g.
        fork height, or 0, if never allowed. This is ignored if a mixin of
