@@ -75,7 +75,7 @@ const size_t   CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE        = 600;
 
 const size_t   CRYPTONOTE_DISPLAY_DECIMAL_POINT              = 4;
 
-const uint64_t MINIMUM_FEE                                   = UINT64_C(55000);
+const uint64_t MINIMUM_FEE                                   = UINT64_C(5500);
 
 /* This section defines our minimum and maximum mixin counts required for transactions */
 const uint64_t MINIMUM_MIXIN_V0                              = 0;
