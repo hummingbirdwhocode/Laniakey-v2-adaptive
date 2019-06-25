@@ -19,7 +19,7 @@
 namespace CryptoNote {
 namespace parameters {
 
-const uint64_t DIFFICULTY_TARGET                             = 10; // seconds
+const uint64_t DIFFICULTY_TARGET                             = 300; // seconds
 
 const uint32_t CRYPTONOTE_MAX_BLOCK_NUMBER                   = 500000000;
 const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 500000000;
@@ -67,7 +67,7 @@ static_assert(sizeof(GENESIS_COINBASE_TX_HEX)/sizeof(*GENESIS_COINBASE_TX_HEX) !
 const uint64_t GENESIS_BLOCK_TIMESTAMP                       = 1549164877;
 
 const size_t   CRYPTONOTE_REWARD_BLOCKS_WINDOW               = 10;
-const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE     = 1000; //size of block (bytes) after which reward for block calculated using block size
+const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE     = 10000; //size of block (bytes) after which reward for block calculated using block size
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V2  = 20000;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V1  = 10000;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_CURRENT = CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE;
@@ -79,10 +79,10 @@ const uint64_t MINIMUM_FEE                                   = UINT64_C(5500);
 
 /* This section defines our minimum and maximum mixin counts required for transactions */
 const uint64_t MINIMUM_MIXIN_V0                              = 0;
-const uint64_t MAXIMUM_MIXIN_V0                              = 0;
+const uint64_t MAXIMUM_MIXIN_V0                              = 7;
 
 /* The mixin to use by default with zedwallet and turtle-service */
-const uint64_t DEFAULT_MIXIN_V0                              = 0;
+const uint64_t DEFAULT_MIXIN_V0                              = 3;
 
 const uint64_t DEFAULT_DUST_THRESHOLD                        = UINT64_C(0);
 
