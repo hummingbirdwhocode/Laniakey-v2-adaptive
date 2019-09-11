@@ -1,4 +1,4 @@
-// Copyright (c) 2012-2017, The CryptoNote developers, The Bytecoin developers
+ // Copyright (c) 2012-2017, The CryptoNote developers, The Bytecoin developers
 // Copyright (c) 2014-2018, The Monero Project
 // Copyright (c) 2018, The TurtleCoin Developers
 // Copyright (c) 2018, The DeroGold Association
@@ -26,13 +26,13 @@ const size_t   CRYPTONOTE_MAX_BLOCK_BLOB_SIZE                = 500000000;
 const size_t   CRYPTONOTE_MAX_TX_SIZE                        = 1000000000;
 const uint64_t CRYPTONOTE_PUBLIC_ADDRESS_BASE58_PREFIX       = 0x2;
 const uint32_t CRYPTONOTE_MINED_MONEY_UNLOCK_WINDOW          = 2;
-const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT            = 60 * 60 * 2;   
+const uint64_t CRYPTONOTE_BLOCK_FUTURE_TIME_LIMIT            = 60 * 60 * 2;
 
 const size_t   BLOCKCHAIN_TIMESTAMP_CHECK_WINDOW             = 60;
 
 // MONEY_SUPPLY - total number coins to be generated
-const uint64_t MONEY_SUPPLY                                  = UINT64_C(858986905600);//static_cast<uint64_t>(-1);
-const unsigned EMISSION_SPEED_FACTOR                         = 23;
+const uint64_t MONEY_SUPPLY                                  = UINT64_C(7589869050000000000);   //static_cast<uint64_t>(-1);
+const unsigned EMISSION_SPEED_FACTOR                         = 26;
 static_assert(EMISSION_SPEED_FACTOR <= 8 * sizeof(uint64_t), "Bad EMISSION_SPEED_FACTOR");
 
 /* Premine amount */
@@ -58,7 +58,7 @@ laniakeyd --print-genesis-tx --genesis-block-reward-address 1dQZU4Nsxm6JdXWetmGb
 * You should see your premine appear in the previously generated wallet.
 
 */
-const char GENESIS_COINBASE_TX_HEX[] = "010401ff0001ffffffff0302baaaa84c5614cca4ad2a69362d5eb48985af1510dcf2ad421811af9a93a6d4a821012e9f99e1c83591610abecb44b5f21bbf3eb1ffa0b6112e0ae9a5768b45704a96";
+const char GENESIS_COINBASE_TX_HEX[] = "013001ff000180f0efe8812002a8f723cdbc4901f8a60501e5d57e2fa3f0242ca5dc22fcb981e528d142eac8e421019e85b5fc8e6965d7a400999358c7f725a19bc2e538aef1578936ad7f56f8320e";
 static_assert(sizeof(GENESIS_COINBASE_TX_HEX)/sizeof(*GENESIS_COINBASE_TX_HEX) != 1, "GENESIS_COINBASE_TX_HEX must not be empty.");
 
 /* This is the unix timestamp of the first "mined" block (technically block 2, not the genesis block)
@@ -73,16 +73,16 @@ const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_V1  = 10000;
 const size_t   CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE_CURRENT = CRYPTONOTE_BLOCK_GRANTED_FULL_REWARD_ZONE;
 const size_t   CRYPTONOTE_COINBASE_BLOB_RESERVED_SIZE        = 600;
 
-const size_t   CRYPTONOTE_DISPLAY_DECIMAL_POINT              = 4;
+const size_t   CRYPTONOTE_DISPLAY_DECIMAL_POINT              = 10;
 
-const uint64_t MINIMUM_FEE                                   = UINT64_C(5500);
+const uint64_t MINIMUM_FEE                                   = UINT64_C(55000000);
 
 /* This section defines our minimum and maximum mixin counts required for transactions */
 const uint64_t MINIMUM_MIXIN_V0                              = 0;
-const uint64_t MAXIMUM_MIXIN_V0                              = 7;
+const uint64_t MAXIMUM_MIXIN_V0                              = 1;
 
 /* The mixin to use by default with zedwallet and turtle-service */
-const uint64_t DEFAULT_MIXIN_V0                              = 3;
+const uint64_t DEFAULT_MIXIN_V0                              = 1;
 
 const uint64_t DEFAULT_DUST_THRESHOLD                        = UINT64_C(0);
 
@@ -210,11 +210,12 @@ const char     LATEST_VERSION_URL[]                          = "https://github.c
 const std::string LICENSE_URL                                = "";
 const static   boost::uuids::uuid CRYPTONOTE_NETWORK         =
 {
-    {  0x55, 0x58, 0x80, 0x85, 0x8c, 0x73, 0x74, 0x6f, 0x72, 0x25, 0x89, 0x6d, 0x6f, 0x72, 0x40, 0x68  }
+    {  0x14, 0x37, 0x52, 0x39, 0x4c, 0x72, 0x11, 0x6f, 0x12, 0x22, 0x33, 0x6d, 0x6f, 0x31, 0x2, 0x84  }
 };
 
 const char* const SEED_NODES[] = {
-  "185.34.136.17:10001",   //
   "0.0.0.0:10001",   //
+  "0.0.0.0:10001",
+    //
 };
 } // CryptoNote
