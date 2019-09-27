@@ -213,7 +213,7 @@ int main(int argc, char* argv[])
     try {
       currencyBuilder.currency();
     } catch (std::exception&) {
-      std::cout << "GENESIS_COINBASE_TX_HEX constant has an incorrect value. Please launch: " << CryptoNote::CRYPTONOTE_NAME << "d --print-genesis-tx" << std::endl;
+      std::cout << "GENESIS_COINBASE_TX_HEX constant has an incorrect value. Please launch: " << CryptoNote::CRYPTONOTE_NAME << "laniakeyd --print-genesis-tx" << std::endl;
       return 1;
     }
     CryptoNote::Currency currency = currencyBuilder.currency();
